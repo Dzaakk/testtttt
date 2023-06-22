@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Template</title>
+</head>
+<body>
+    <script>
+        const name = "your_name";
+        const middleName = "middleName"
+        const template = `Name : ${name} ${middleName}`;
+        
+        console.info(template);
+
+        const nilai = 90;
+        const template2 = `Name: ${name}, Lulus : ${nilai>70}`;
+        console.info(template2)
+
+        let multiLineString = `
+this is 
+    the
+multi
+    line
+        `;
+        document.writeln("<pre>")
+        document.writeln(multiLineString)
+        document.writeln("</pre>")
+    </script>
+</body>
+</html>
