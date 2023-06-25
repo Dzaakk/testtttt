@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Object</title>
+</head>
+<body>
+    <script>
+        const person= {};
+
+        person["name"] = "user1";
+        person["age"] = 22;
+        person["gender"] = "male";
+
+        console.table(person);
+
+        delete person["age"];
+
+        console.table(person);
+
+        const user = {
+            "full_name" : "user2 full name",
+            age : 21,
+            gender : "female"
+        };
+
+        console.table(user)
+
+        console.info(`Nama : ${user["full_name"]}`)
+        console.info(`Age : ${user.age}`)
+        console.info(`Gender : ${user.gender}`)
+    </script>
+</body>
+</html>
