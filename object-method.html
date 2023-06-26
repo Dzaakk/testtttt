@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Method</title>
+</head>
+<body>
+    <script>
+        // function di object kadang disebut sebagai object method
+        
+        //cara 1
+        // const person = {
+        //     name : "user1",
+        //     sayHello : function sayHello(name) {
+        //         alert(`Hello ${name}`);
+        //     }
+        // };
+
+        const person = {
+            name: "user3"
+        };
+
+        //cara menambahkan method ke object
+        person.sayHello = function (name) {
+            alert(`Hello ${name}`);
+        }
+
+        person.sayHello(`user2`);
+    </script>
+</body>
+</html>
