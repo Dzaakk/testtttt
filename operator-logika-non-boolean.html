@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator logika di non boolean</title>
+</head>
+<body>
+    <script>
+        console.info("hello" || "");
+        console.info("" || []);
+        console.info("0" || "Nol");
+        console.info(0 || "Nol");
+        console.info(null || "NULL");
+        console.info(undefined || "UNDEFINED");
+        console.info(0 || false);
+
+        //------------------------
+        console.info("hello" && "");
+        console.info("" && []);
+        console.info("0" && "Nol");
+        console.info(0 && "Nol");
+        console.info(null && "NULL");
+        console.info(undefined && "UNDEFINED");
+        console.info(0 && false);
+    </script>
+</body>
+</html>
