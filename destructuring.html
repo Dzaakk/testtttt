@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    <script>
+        {
+            const names = ["A", "B", "C", "D"];
+            const [firstName, middleName, lastName, ...others] = names;
+
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastName);
+            console.info(others);
+        }
+        
+        {
+           const person = {
+            firstName : "user1",
+            lastName: "us",
+            address: {
+                street:"street",
+                city:"city",
+                country:"country",
+               },
+                hobby :"game"
+            };
+
+            // let {firstName, lastName, address, ...others} = person;
+            let {firstName, lastName, address: {city, street, country}, ...others} = person;
+
+            console.info(firstName);
+            console.info(lastName);
+            // console.info(address);
+            console.info(city);
+            console.info(country);
+            console.info(street);
+            console.info(others);
+
+        }
+        {
+            function displayPerson({firstName, middleName, lastName}) {
+                console.info(firstName);
+                console.info(middleName);
+                console.info(lastName);
+            }
+               const person = {
+                    firstName : "user1",
+                    middleName : "mid",
+                    lastName: "us",
+                };
+
+                displayPerson(person)
+        }
+        {
+            function sum([first, second]) {
+                return first + second
+            }
+
+            console.info(sum([1,1]));
+            console.info(sum[10,19]);
+        }
+        {
+            const names = ["name1", "name2", "name3"];
+            const [firstName, middleName, lastName = "lastname"] = names;
+
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastName);
+        }
+        {
+           const person = {
+            firstName : "user1",
+            lastName: "us",
+            };
+
+            let {firstName, middleName = "middle", lastName} = person;
+
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastName);
+        }
+        {
+           const person = {
+            firstName : "user1",
+            lastName: "us",
+            };
+
+            let {firstName: namaDepan, 
+                middleName: namaTengah = "middle",
+                lastName: namaBelakang} = person;
+
+            console.info(namaDepan);
+            console.info(namaTengah);
+            console.info(namaBelakang);
+        }
+    </script>
+</body>
+</html>
